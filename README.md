@@ -42,6 +42,11 @@ heroku config:set ALLOWED_HOSTS={app-name-here}.herokuapp.com
 6. Deploy: `git push heroku`
 
 
+## Example URLs:
+
+- https://example.herokuapp.com/get/?types=bar&bound_lower=48.132986,11.566126&bound_upper=48.142199,11.580047
+- https://example.herokuapp.com/get-by-id/?place_id=ChIJSYuuSx9awokRyrrOFTGg0GY
+
 ## populartimes.get_id(...)
 Retrieves information for a given place id and adds populartimes, wait, time_spent and other data not accessible via Google Places.
 
