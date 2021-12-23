@@ -37,6 +37,7 @@ MAPS_API_KEY={insert-key-here}
 heroku config:set DISABLE_COLLECTSTATIC=1
 heroku config:set SECRET_KEY=narf
 heroku config:set MAPS_API_KEY={insert-key-here}
+heroku config:set ALLOWED_HOSTS={app-name-here}.herokuapp.com
 ```
 6. Deploy: `git push heroku`
 
