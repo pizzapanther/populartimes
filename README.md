@@ -14,6 +14,19 @@ As Google Maps is constantly updated this library can  be unstable.
 + `import populartimes` and run with `populartimes.get(...)` or `populartimes.get_id(...)`
  + **Note**: The library is not available via PyPI, so you have to clone/download the repository and install it locally.
 
+## Local Server Setup
+
+1. `git clone git@github.com:pizzapanther/populartimes.git`
+2. `cd populartimes`
+3. `pdm install`
+4. Create a `.env` file and add (secret key doesn't really matter, can be anything):
+```
+SECRET_KEY=narf
+MAPS_API_KEY=dkfkdsjfkjdskfjk
+```
+5. Run: `pdm run manage runserver`
+
+
 ## populartimes.get_id(...)
 Retrieves information for a given place id and adds populartimes, wait, time_spent and other data not accessible via Google Places.
 
