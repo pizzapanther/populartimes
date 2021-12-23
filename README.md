@@ -22,9 +22,23 @@ As Google Maps is constantly updated this library can  be unstable.
 4. Create a `.env` file and add (secret key doesn't really matter, can be anything):
 ```
 SECRET_KEY=narf
-MAPS_API_KEY=dkfkdsjfkjdskfjk
+MAPS_API_KEY={insert-key-here}
 ```
 5. Run: `pdm run manage runserver`
+
+## Heroku Deploy
+
+1. `git clone git@github.com:pizzapanther/populartimes.git`
+2. `cd populartimes`
+3. Create a heroku app
+4. Init Heroku: `heroku git:remote -a {app-name-here}`
+5. Setup config:
+```
+heroku config:set DISABLE_COLLECTSTATIC=1
+heroku config:set SECRET_KEY=narf
+heroku config:set MAPS_API_KEY={insert-key-here}
+```
+6. Deploy: `git push heroku`
 
 
 ## populartimes.get_id(...)
