@@ -73,3 +73,7 @@ venv.bak/
 # IDE/Editor
 .vscode/
 .idea
+
+.pdm.toml
+__pypackages__/
+db.sqlite3
