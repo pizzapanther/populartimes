@@ -1,0 +1,31 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "Paul Bailey", email = "paul@neutron.studio"},
+]
+dependencies = [
+    "django>=3.2.10",
+    "requests>=2.26.0",
+    "geopy>=2.2.0",
+    "urllib3>=1.26.7",
+    "gunicorn>=20.1.0",
+]
+requires-python = "==3.7"
+license = {text = "MIT"}
+
+[project.urls]
+homepage = ""
+
+[tool]
+[tool.pdm]
+
+[build-system]
+requires = ["pdm-pep517"]
+build-backend = "pdm.pep517.api"
+
+[tool.pdm.scripts]
+_.env_file = ".env"
+manage = "python manage.py"
+req = "pdm export -o requirements.txt --without-hashes --prod"
