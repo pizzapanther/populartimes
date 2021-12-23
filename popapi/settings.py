@@ -27,8 +27,9 @@ MAPS_API_KEY = os.environ.get('MAPS_API_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',')
+if len(ALLOWED_HOSTS) == 1 and '' in ALLOWED_HOSTS:
+    ALLOWED_HOSTS = []
 
 # Application definition
 
